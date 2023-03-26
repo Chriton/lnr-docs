@@ -1,0 +1,79 @@
+---
+sidebar_position: 3
+---
+
+# useLnrGetPrimaryName
+
+The useLnrGetPrimaryName react hook is used to get the **primary name** set for a given address.
+
+## Usage
+
+To use the useLnrGetPrimaryName hook, you need to import it and call it in your functional component.
+The hook takes an **address** parameter, which is the address for which you want to resolve the primary name.
+
+```typescript jsx
+import { useLnrGetPrimaryName } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const { name } = useLnrGetPrimaryName('0x1234567890123456789012345678901234567890');
+  // ...
+}
+```
+
+You can also use object destructuring to get individual properties from the returned object:
+
+```typescript jsx
+import { useLnrGetPrimaryName } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+const { name, error, hasError, loading } = useLnrGetPrimaryName('0x1234567890123456789012345678901234567890');
+// ...
+}
+```
+
+## Parameters
+
+- **address** (string): The address for which you want to resolve the primary name.
+
+## Returns
+
+The hook returns an object with the following properties:
+
+- **name** (string | null): The primary name set for the given address, or null if no name is set.
+- **error** (string | null): The error message if an error occurs, or null if no error occurs
+- **hasError** (boolean): Indicates whether an error has occurred.
+- **loading** (boolean): Indicates whether the data is currently loading.
+
+## Example
+
+Here is an example of how you can use the useLnrGetPrimaryName hook in a functional component:
+
+```typescript jsx
+import React from "react";
+import { useLnrGetPrimaryName } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const address = "0x1234567890123456789012345678901234567890";
+  const { name, error, hasError, loading } = useLnrGetPrimaryName(address);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (hasError) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div>
+      <h2>Address: {address}</h2>
+      <p>Primary Name: {name}</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+```
+
+
+

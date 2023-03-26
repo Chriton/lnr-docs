@@ -1,0 +1,71 @@
+---
+sidebar_position: 2
+---
+
+# useLnrGetController
+
+The useLnrGetController hook is used to get the **controller** address set for a given name.
+
+## Usage
+
+To use the useLnrGetController hook, you need to import it and call it in your functional component.
+The hook takes a **name** parameter, which is the name you want to check for a controller.
+
+```typescript
+import { useLnrGetController } from "@linagee/lnr-ethers-react";
+```
+
+You can also use object destructuring to get individual properties from the returned object:
+
+```typescript jsx
+import { useLnrGetController } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+const { controller, error, hasError, loading } = useLnrGetController('0xHal');
+// ...
+}
+```
+
+## Parameters
+
+- **name** (string): The name to get the controller of.
+
+## Returns
+
+The hook returns an object with the following properties:
+
+- **controller** (string | null): The controller address set for the specified name, or null if no controller is found
+- **error** (string | null): The error message if an error occurs, or null if no error occurs
+- **hasError** (boolean): Indicates whether an error has occurred.
+- **loading** (boolean): Indicates whether the data is currently loading.
+
+## Example
+
+Here's an example of how to use the useLnrGetController hook in a functional component:
+
+```typescript jsx
+import React from "react";
+import { useLnrGetController } from "@linagee/lnr-ethers-react";
+
+function MyComponent() {
+  const name = "0xHal";
+  const { controller, error, hasError, loading } = useLnrGetController(name);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (hasError) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div>
+      <h2>Name: {name}</h2>
+      <p>Controller: {controller}</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+```

@@ -9,6 +9,7 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(90deg, #B794F4, #90CDF4);
+  /*background-image: url(/img/linagee-banner.jpg);*/
 }
 
 @media screen and (max-width: 996px) {

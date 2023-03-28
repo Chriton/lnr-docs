@@ -4,6 +4,12 @@
   "private": false,
   "description": "Linagee Documentation",
   "author": "Chriton",
+  "keywords": [
+    "LNR",
+    "linagee",
+    "ethers"
+  ],
+  "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",

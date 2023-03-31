@@ -8,4 +8,6 @@
 .featureSvg {
   height: 200px;
   width: 200px;
+  /*box-shadow: #8d949e 5px 5px 10px;*/
+  filter: drop-shadow(10px 15px 10px rgb(0 0 0 / 0.4));
 }

@@ -3,59 +3,75 @@ import clsx from 'clsx';
 import styles from './styles.module.css';
 
 const FeatureList = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-          The <b><a href="/docs/intro">developer quickstart</a></b> guide will get you up and running in no time.
-      </>
-    ),
-  },
-  {
-    title: 'Forever On Chain',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-          Sites you deploy will live <b>forever</b> as long as the ethereum network is alive.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by The Graph',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-          Queries are made using <a href="/https://thegraph.com">The Graph</a> which is the standard for indexing blockchain data.
-      </>
-    ),
-  },
+    {
+        title: 'Easy to Use',
+        // Svg: require('@site/static/img/1.svg').default,
+        image: require('@site/static/img/1.png').default,
+        description: (
+            <>
+                The <b><a href="/docs/intro">developer quickstart</a></b> guide will get you up and running in no time
+            </>
+        ),
+    },
+    {
+        title: 'Forever On Chain',
+        // Svg: require('@site/static/img/2.svg').default,
+        image: require('@site/static/img/2.png').default,
+        description: (
+            <>
+                Sites you <b><a href={'/docs/intro'}>deploy</a></b> will live <b>forever</b> as long as the ethereum
+                network exists
+            </>
+        ),
+    },
+    // {
+    //     title: 'Powered by The Graph',
+    //     // Svg: require('@site/static/img/4.svg').default,
+    //     image: require('@site/static/img/3.png').default,
+    //     description: (
+    //         <>
+    //             Queries are made using <b><a href="https://thegraph.com" target="_blank" rel="noopener">The
+    //             Graph</a></b> which is the standard for indexing blockchain data.
+    //         </>
+    //     ),
+    // },
+    {
+        title: 'Why derp://',
+        // Svg: require('@site/static/img/4.svg').default,
+        image: require('@site/static/img/3.png').default,
+        description: (
+            <>
+                <b>DERP</b> is an acronym for Decentralized Ethereum Routing Protocol. Read <b><a href={'/docs/intro'}> more</a></b>
+            </>
+        ),
+    },
 ];
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
+function Feature({Svg, title, description, image}) {
+    return (
+        <div className={clsx('col col--4')}>
+            <div className="text--center">
+                {/*<Svg className={styles.featureSvg} role="img" />*/}
+                <img src={image} className={styles.featureSvg}/>
+            </div>
+            <div className="text--center padding-horiz--md">
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
+        </div>
+    );
 }
 
 export default function HomepageFeatures() {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+    return (
+        <section className={styles.features}>
+            <div className="container">
+                <div className="row">
+                    {FeatureList.map((props, idx) => (
+                        <Feature key={idx} {...props} />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 }

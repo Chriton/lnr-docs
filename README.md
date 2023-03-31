@@ -1,6 +1,6 @@
 # Linagee documentation website
 
-#### Currently, this documentation website is hosted at [https://docs.linagee.com](https://docs.linagee.com)
+#### Currently, this documentation website is hosted at [https://docs.linagee.app](https://docs.linagee.app)
 
 The documentation is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 With Docusaurus, you write Markdown files and Docusaurus generates a beautiful static website for you.

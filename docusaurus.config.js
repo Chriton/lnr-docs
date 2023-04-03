@@ -62,7 +62,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/lnr-logo.svg',
+      image: 'img/linagee-banner.jpg',
       navbar: {
         title: 'Linagee Name Registrar',
         logo: {
@@ -79,8 +79,9 @@ const config = {
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Linagee-Name-Registrar',
-            label: 'GitHub',
+            // label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
           },
         ],
       },

@@ -29,17 +29,30 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Github link */
 .header-github-link {
-  background-color: #231917;
   -webkit-mask-image: url(/img/github-logo.svg);
   mask-image: url(/img/github-logo.svg);
   mask-size: cover;
   width: 24px;
   height: 24px;
 
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
-.header-github-link:hover {
-  background-color: #888282;
+[data-theme='light'] .header-github-link {
+  background-color: #231917;
 }
+
+[data-theme='light'] .header-github-link:hover {
+  background-color: #888285;
+}
+
+[data-theme='dark'] .header-github-link {
+  background-color: #ffffff
+}
+
+[data-theme='dark'] .header-github-link:hover {
+  background-color: #888285;
+}
+

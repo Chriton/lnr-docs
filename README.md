@@ -1,9 +1,9 @@
 # Linagee documentation website
 
-#### Currently, this documentation website is hosted at [https://docs.linagee.app](https://docs.linagee.app)
+#### The documentation website is hosted at [https://docs.linagee.app](https://docs.linagee.app)
 
-The documentation is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
-With Docusaurus, you write Markdown files and Docusaurus generates a beautiful static website for you.
+It was built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator that allows you to write 
+Markdown files and generate a beautiful static website.
 
 ### Steps to writing/updating documentation
 
@@ -26,4 +26,4 @@ With Docusaurus, you write Markdown files and Docusaurus generates a beautiful s
    Then publish it in your favorite location.
    I recommend using [Vercel](https://vercel.com/) to host the static site. It's free and easy to use.
 
-7. Commit and push your changes to the `main` branch or create a pull request
+7. Commit and push your changes to the `main` branch or create a pull request to merge your changes into this repo.

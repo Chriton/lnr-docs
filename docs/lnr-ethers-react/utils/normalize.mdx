@@ -4,7 +4,8 @@ sidebar_position: 7
 
 # normalize
 
-This function uses the [@adraffy/ens-normalize](https://www.npmjs.com/package/@adraffy/ens-normalize) package to normalize a domain string.
+This function uses the [@adraffy/ens-normalize](https://www.npmjs.com/package/@adraffy/ens-normalize)
+package to normalize a domain string.
 
 ```
 function normalize(_name: string): string
@@ -16,7 +17,7 @@ function normalize(_name: string): string
 import { lnr } from '@linagee/lnr-ethers-react';
 
 const MyComponent = () => {
-    const domainString = "0xHal.og";
+    const domainString = "0xHal";
 
   return (
     <div>
@@ -31,7 +32,7 @@ export default MyComponent;
 The above code will render the following:
 
 ```
-0xhal.og
+0xhal
 ```
 
 ## Parameters

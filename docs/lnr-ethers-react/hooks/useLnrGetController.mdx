@@ -11,13 +11,18 @@ The useLnrGetController hook is used to get the **controller** address set for a
 To use the useLnrGetController hook, you need to import it and call it in your functional component.
 The hook takes a **name** parameter, which is the name you want to check for a controller.
 
-```typescript
+```typescript jsx title="MyComponent.tsx"
 import { useLnrGetController } from "@linagee/lnr-ethers-react";
+
+function MyComponent() {
+  const { controller } = useLnrGetController('0xhal.og');
+  // ...
+}
 ```
 
 You can also use object destructuring to get individual properties from the returned object:
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import { useLnrGetController } from '@linagee/lnr-ethers-react';
 
 function MyComponent() {
@@ -43,7 +48,7 @@ The hook returns an object with the following properties:
 
 Here's an example of how to use the useLnrGetController hook in a functional component:
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import React from "react";
 import { useLnrGetController } from "@linagee/lnr-ethers-react";
 

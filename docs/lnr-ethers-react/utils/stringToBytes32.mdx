@@ -1,0 +1,47 @@
+---
+sidebar_position: 8
+---
+
+# stringToBytes32
+
+This function converts a string to a bytes32 value represented as a hexadecimal string.
+
+```
+function stringToBytes32(_string: string): string
+```
+
+## Usage
+
+```typescript jsx title="MyComponent.tsx"
+import { lnr } from '@linagee/lnr-ethers-react';
+
+const MyComponent = () => {
+    const inputString = "0xhal";
+
+  return (
+    <div>
+      <h1>{lnr.utils.stringToBytes32(inputString)}</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+The above code will render the following:
+
+```
+0x307868616c000000000000000000000000000000000000000000000000000000
+```
+
+## Parameters
+
+- **_string** (string): A string to be converted into a bytes32 value.
+
+## Returns
+
+- **(string)**: The bytes32 value represented as a hexadecimal string, corresponding to the given input string.
+
+## Throws
+
+If the resulting bytes32 value is not of the correct length (66 characters), the function will throw an error.

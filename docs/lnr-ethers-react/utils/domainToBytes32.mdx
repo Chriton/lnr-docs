@@ -1,0 +1,47 @@
+---
+sidebar_position: 3
+---
+
+# domainToBytes32
+
+This function converts a domain string, such as "test.og", into a bytes32 value represented as a hexadecimal string.
+
+```
+function domainToBytes32(_name: string): string
+```
+
+## Usage
+
+```typescript jsx title="MyComponent.tsx"
+import { lnr } from '@linagee/lnr-ethers-react';
+
+const MyComponent = () => {
+    const domainString = "0xhal.og";
+
+  return (
+    <div>
+      <h1>{lnr.utils.domainToBytes32(domainString)}</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+The above code will render the following:
+
+```
+0x307868616c000000000000000000000000000000000000000000000000000000
+```
+
+## Parameters
+
+- **_name** (string): A domain string to be converted into a bytes32 value.
+
+## Returns
+
+- **(string)**: The bytes32 value represented as a hexadecimal string, corresponding to the given domain string.
+
+## Throws
+
+If the provided domain string is not valid, the function will throw an error with an appropriate message.

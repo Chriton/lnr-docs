@@ -1,0 +1,46 @@
+---
+sidebar_position: 1
+---
+
+# bytes32ToDomain
+
+This function converts a bytes32 value, given as a hexadecimal string, into a domain string representation and also appending the ".og" top-level domain.
+
+```
+function bytes32ToDomain(_name: string): string
+```
+
+## Usage
+
+```typescript jsx title="MyComponent.tsx"
+import { lnr } from '@linagee/lnr-ethers-react';
+
+const MyComponent = () => {
+    const hexString = `0x307868616c000000000000000000000000000000000000000000000000000000`;
+
+  return (
+    <div>
+      <h1>{lnr.utils.bytes32ToDomain(hexString)}</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+The above code will render the following:
+
+```
+0xhal.og
+```
+
+## Parameters
+
+- **_name** (string): A hexadecimal string representation of a bytes32 value.
+
+## Returns
+
+- **(string)**: The domain string representation of the bytes32 value, with the ".og" top-level domain appended.
+
+
+

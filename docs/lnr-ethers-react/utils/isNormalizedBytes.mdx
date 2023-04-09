@@ -1,0 +1,44 @@
+---
+sidebar_position: 4
+---
+
+# isNormalizedBytes
+
+This function checks if a bytes32 value representing a domain is normalized.
+
+```
+function isNormalizedBytes(_bytes: string): boolean
+```
+
+## Usage
+
+```typescript jsx title="MyComponent.tsx"
+import { lnr } from '@linagee/lnr-ethers-react';
+
+const MyComponent = () => {
+    const bytesValue = `0x307868616c000000000000000000000000000000000000000000000000000000`;
+
+  return (
+    <div>
+      <h1>{lnr.utils.isNormalizedBytes(bytesValue) ? "Normalized" : "Not Normalized"}</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+The above code will render the following:
+
+```
+Normalized
+```
+
+## Parameters
+
+- **_bytes** (string): A bytes32 value represented as a hexadecimal string, corresponding to a domain string.
+
+## Returns
+
+- **(boolean)**: True if the domain represented by the bytes32 value is normalized, false otherwise.
+

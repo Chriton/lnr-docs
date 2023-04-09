@@ -1,0 +1,43 @@
+---
+sidebar_position: 7
+---
+
+# normalize
+
+This function uses the [@adraffy/ens-normalize](https://www.npmjs.com/package/@adraffy/ens-normalize) package to normalize a domain string.
+
+```
+function normalize(_name: string): string
+```
+
+## Usage
+
+```typescript jsx title="MyComponent.tsx"
+import { lnr } from '@linagee/lnr-ethers-react';
+
+const MyComponent = () => {
+    const domainString = "0xHal.og";
+
+  return (
+    <div>
+      <h1>{lnr.utils.normalize(domainString)}</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+The above code will render the following:
+
+```
+0xhal.og
+```
+
+## Parameters
+
+- **_name** (string): A domain string to be normalized.
+
+## Returns
+
+- **(string)**: The normalized domain string.

@@ -1,0 +1,76 @@
+---
+sidebar_position: 4
+---
+
+# useLnrIsNormalizedBytes
+
+The useLnrIsNormalizedBytes react hook is used to check if a given byteCode of a name is normalized.
+
+## Usage
+
+To use the useLnrIsNormalizedBytes hook, you need to import it and call it in your functional component.
+The hook takes a byteCode parameter, which is the byteCode of the name you want to check for normalization.
+
+```typescript jsx title="MyComponent.tsx"
+import { useLnrIsNormalizedBytes } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const { isNormalizedBytes } = useLnrIsNormalizedBytes('0x307868616c000000000000000000000000000000000000000000000000000000');
+  // ...
+}
+```
+
+You can also use object destructuring to get individual properties from the returned object:
+
+```typescript jsx title="MyComponent.tsx"
+import { useLnrIsNormalizedBytes } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+const { isNormalizedBytes, error, hasError, loading } = useLnrIsNormalizedBytes('0x307868616c000000000000000000000000000000000000000000000000000000');
+// ...
+}
+```
+
+## Parameters
+
+- **byteCode** (string): The byteCode of the name you want to check for normalization.
+
+## Returns
+
+The hook returns an object with the following properties:
+
+- **isNormalizedBytes** (boolean): Whether the given byteCode of the name is normalized.
+- **error** (string | null): The error message if an error occurs, or null if no error occurs
+- **hasError** (boolean): Indicates whether an error has occurred.
+- **loading** (boolean): Indicates whether the data is currently loading.
+
+## Example
+
+Here is an example of how you can use the useLnrIsNormalizedBytes hook in a functional component:
+
+```typescript jsx title="MyComponent.tsx"
+import React from "react";
+import { useLnrIsNormalizedBytes } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const byteCode = "0x307868616c000000000000000000000000000000000000000000000000000000";
+  const { isNormalizedBytes, error, hasError, loading } = useLnrIsNormalizedBytes(byteCode);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (hasError) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div>
+      <h2>ByteCode: {byteCode}</h2>
+      <p>Is Normalized Bytes: {isNormalizedBytes ? "Yes" : "No"}</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+```

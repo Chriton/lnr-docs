@@ -11,7 +11,7 @@ The useLnrGetAddress react hook allows you to get the **address** associated wit
 To use the useLnrGetAddress hook, you need to import it and call it in your functional component.
 The hook takes a **name** parameter, which is the name you want to resolve to an address.
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import { useLnrGetAddress } from '@linagee/lnr-ethers-react';
 
 function MyComponent() {
@@ -22,7 +22,7 @@ function MyComponent() {
 
 You can also use object destructuring to get individual properties from the returned object:
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import { useLnrGetAddress } from '@linagee/lnr-ethers-react';
 
 function MyComponent() {
@@ -48,7 +48,7 @@ The hook returns an object with the following properties:
 
 Here is an example of how you can use the useLnrGetAddress hook in a functional component:
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import React from "react";
 import { useLnrGetAddress } from "@linagee/lnr-ethers-react";
 

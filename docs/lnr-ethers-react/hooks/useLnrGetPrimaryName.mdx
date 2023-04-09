@@ -11,7 +11,7 @@ The useLnrGetPrimaryName react hook is used to get the **primary name** set for 
 To use the useLnrGetPrimaryName hook, you need to import it and call it in your functional component.
 The hook takes an **address** parameter, which is the address for which you want to resolve the primary name.
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import { useLnrGetPrimaryName } from '@linagee/lnr-ethers-react';
 
 function MyComponent() {
@@ -22,7 +22,7 @@ function MyComponent() {
 
 You can also use object destructuring to get individual properties from the returned object:
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import { useLnrGetPrimaryName } from '@linagee/lnr-ethers-react';
 
 function MyComponent() {
@@ -48,7 +48,7 @@ The hook returns an object with the following properties:
 
 Here is an example of how you can use the useLnrGetPrimaryName hook in a functional component:
 
-```typescript jsx
+```typescript jsx title="MyComponent.tsx"
 import React from "react";
 import { useLnrGetPrimaryName } from '@linagee/lnr-ethers-react';
 
@@ -74,6 +74,5 @@ function MyComponent() {
 
 export default MyComponent;
 ```
-
 
 

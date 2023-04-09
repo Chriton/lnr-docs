@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Getting Started
 
-#### Install @linagee/lnr-ethers-react as a dependency in your React project:
+1. #### Install @linagee/lnr-ethers-react as a dependency in your React project:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -34,7 +34,7 @@ You need at least react version 18.2.0 to use @linagee/lnr-ethers-react.
 
 ---
 
-#### Set LnrConfigProvider as a wrapper for your app
+2. #### Set LnrConfigProvider as a wrapper for your app
 
 Example:
 ```typescript jsx
@@ -68,34 +68,4 @@ You can set any provider you want, but we recommend using Alchemy.
 
 ---
 
-
-#### Use the hooks in your components to get the data you need
-
-Example:
-
-```typescript jsx
-import React from "react";
-import { useLnrGetAddress } from "@linagee/lnr-ethers-react";
-
-function MyComponent() {
-  const name = "0xhal.og";
-  const { address, error, hasError, loading } = useLnrGetAddress(name);
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (hasError) {
-    return <div>Error: {error}</div>;
-  }
-
-  return (
-    <div>
-      <h2>Name: {name}</h2>
-      <p>Address: {address}</p>
-    </div>
-  );
-}
-
-export default MyComponent;
-```
+3. #### Use the hooks or utils functions in your components to get the data you need as described in the [hooks](../category/hooks) and [utils](../category/utils) sections.

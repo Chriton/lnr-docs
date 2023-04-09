@@ -1,0 +1,76 @@
+---
+sidebar_position: 6
+---
+
+# useLnrIsValidDomain
+
+The useLnrIsValidDomain react hook is used to check if a given name is a valid domain.
+
+## Usage
+
+To use the useLnrIsValidDomain hook, you need to import it and call it in your functional component.
+The hook takes a name parameter, which is the domain name you want to check for validity.
+
+```typescript jsx title="MyComponent.tsx"
+import { useLnrIsValidDomain } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const { isValidDomain } = useLnrIsValidDomain('0xhal.og');
+  // ...
+}
+```
+
+You can also use object destructuring to get individual properties from the returned object:
+
+```typescript jsx title="MyComponent.tsx"
+import { useLnrIsValidDomain } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+const { isValidDomain, error, hasError, loading } = useLnrIsValidDomain('0xhal.og');
+// ...
+}
+```
+
+## Parameters
+
+- **name** (string): The domain name you want to check for validity.
+
+## Returns
+
+The hook returns an object with the following properties:
+
+- **isValidDomain** (boolean): Whether the given name is a valid domain.
+- **error** (string | null): The error message if an error occurs, or null if no error occurs
+- **hasError** (boolean): Indicates whether an error has occurred.
+- **loading** (boolean): Indicates whether the data is currently loading.
+
+## Example
+
+Here is an example of how you can use the useLnrIsValidDomain hook in a functional component:
+
+```typescript jsx title="MyComponent.tsx"
+import React from "react";
+import { useLnrIsValidDomain } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const name = "0xhal.og";
+  const { isValidDomain, error, hasError, loading } = useLnrIsValidDomain(name);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (hasError) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div>
+      <h2>Name: {name}</h2>
+      <p>Is Valid Domain: {isValidDomain ? "Yes" : "No"}</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+```

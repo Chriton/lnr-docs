@@ -1,0 +1,50 @@
+---
+sidebar_position: 6
+---
+
+# isValidDomain
+
+This function takes a domain string, normalizes it, checks that it is not a subdomain, is an "og" domain, and verifies that it is not too long.
+
+```
+function isValidDomain(_name: string): [boolean, string]
+```
+
+## Usage
+
+```typescript jsx title="MyComponent.tsx"
+import { lnr } from '@linagee/lnr-ethers-react';
+
+const MyComponent = () => {
+    const domainString = "0xhal.og";
+
+  return (
+    <div>
+      <h1>{lnr.utils.isValidDomain(domainString)[0] ? "Valid Domain" : "Invalid Domain"}</h1>
+    </div>
+  );
+};
+
+export default MyComponent;
+```
+
+The above code will render the following:
+
+```
+Valid Domain
+```
+
+## Parameters
+
+- **_name** (string): A domain string to be checked for validity.
+
+## Returns
+
+- **([boolean, string])**: An array with the first element being a boolean indicating if the domain is valid, and the second element being the normalized domain string.
+
+## Validity Conditions
+
+- The domain should not be an empty string.
+- The domain should not be a subdomain (only one dot "." allowed).
+- The domain should end with ".og".
+- The domain's byte size should not exceed 35.

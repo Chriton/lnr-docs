@@ -1,0 +1,76 @@
+---
+sidebar_position: 5
+---
+
+# useLnrIsNormalizedName
+
+The useLnrIsNormalizedName react hook is used to check if a given name is normalized.
+
+## Usage
+
+To use the useLnrIsNormalizedName hook, you need to import it and call it in your functional component.
+The hook takes a name parameter, which is the domain name you want to check for normalization.
+
+```typescript jsx title="MyComponent.tsx"
+import { useLnrIsNormalizedName } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const { isNormalizedName } = useLnrIsNormalizedName('0xhal.og');
+  // ...
+}
+```
+
+You can also use object destructuring to get individual properties from the returned object:
+
+```typescript jsx title="MyComponent.tsx"
+import { useLnrIsNormalizedName } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+const { isNormalizedName, error, hasError, loading } = useLnrIsNormalizedName('0xhal.og');
+// ...
+}
+```
+
+## Parameters
+
+- **name** (string): The domain name you want to check for normalization.
+
+## Returns
+
+The hook returns an object with the following properties:
+
+- **isNormalizedName** (boolean): Whether the given name is normalized.
+- **error** (string | null): The error message if an error occurs, or null if no error occurs
+- **hasError** (boolean): Indicates whether an error has occurred.
+- **loading** (boolean): Indicates whether the data is currently loading.
+
+## Example
+
+Here is an example of how you can use the useLnrIsNormalizedName hook in a functional component:
+
+```typescript jsx title="MyComponent.tsx"
+import React from "react";
+import { useLnrIsNormalizedName } from '@linagee/lnr-ethers-react';
+
+function MyComponent() {
+  const name = "0xhal.og";
+  const { isNormalizedName, error, hasError, loading } = useLnrIsNormalizedName(name);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (hasError) {
+    return <div>Error: {error}</div>;
+  }
+
+  return (
+    <div>
+      <h2>Name: {name}</h2>
+      <p>Is Normalized Name: {isNormalizedName ? "Yes" : "No"}</p>
+    </div>
+  );
+}
+
+export default MyComponent;
+```

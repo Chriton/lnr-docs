@@ -6,20 +6,20 @@ const FeatureList = [
     {
         title: 'Easy to Use',
         // Svg: require('@site/static/img/1.svg').default,
-        image: require('@site/static/img/1.png').default,
+        image: require('@site/static/img/chriton_icon_1.png').default,
         description: (
             <>
-                The <b><a href="/docs/intro">developer quickstart</a></b> guide will get you up and running in no time
+                The <b><a href="/docs/developer-quickstart">developer quickstart</a></b> guide will get you up and running in no time
             </>
         ),
     },
     {
         title: 'Forever On Chain',
         // Svg: require('@site/static/img/2.svg').default,
-        image: require('@site/static/img/2.png').default,
+        image: require('@site/static/img/chriton_icon_3.png').default,
         description: (
             <>
-                Sites you <b><a href={'/docs/intro'}>deploy</a></b> will live <b>forever</b> as long as the ethereum
+                Sites you <b><a href={'/docs/introduction'}>deploy</a></b> will live <b>forever</b> as long as the ethereum
                 network exists
             </>
         ),
@@ -36,12 +36,12 @@ const FeatureList = [
     //     ),
     // },
     {
-        title: 'Why derp://',
+        title: 'Why web3://',
         // Svg: require('@site/static/img/4.svg').default,
-        image: require('@site/static/img/3.png').default,
+        image: require('@site/static/img/chriton_icon_2.png').default,
         description: (
             <>
-                <b>DERP</b> is an acronym for Decentralized Ethereum Routing Protocol. Read <b><a href={'/docs/intro'}> more</a></b>
+                <b>web3</b> puts power in the hands of individuals. <b><a href={'/docs/introduction'}> Read more</a></b>
             </>
         ),
     },

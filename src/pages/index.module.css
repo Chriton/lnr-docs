@@ -7,20 +7,21 @@
   padding: 4rem 0;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  /*overflow: hidden;*/
   /*background: linear-gradient(90deg, #B794F4, #90CDF4);*/
-  background-image: url(/img/banner.png);
+  /*background-image: url(/img/banner.png);*/
+  background-image: url(/img/chriton_futuristic_city.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 250px;
+  height: 400px;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
+/*@media screen and (max-width: 996px) {*/
+/*  .heroBanner {*/
+/*    padding: 2rem;*/
+/*  }*/
+/*}*/
 
 .buttons {
   display: flex;

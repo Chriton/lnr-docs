@@ -1,0 +1,59 @@
+---
+sidebar_position: 2
+---
+
+import TableComponent from "../../src/components/TableComponent";
+import TableRowMainnet from "../../src/components/TableRowMainnet";
+import TableRowGoerli from "../../src/components/TableRowGoerli";
+
+# Contracts
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs groupId="operating-systems">
+<TabItem value="Mainnet" label="Mainnet">
+
+<TableComponent>
+    <TableRowMainnet
+        name={"Linagee"}
+        address={"0x5564886ca2C518d1964E5FCea4f423b41Db9F561"}
+        info={"The original linagee contract"}
+    />
+    <TableRowMainnet
+        name={"Wrapper"}
+        address={"0x2Cc8342d7c8BFf5A213eb2cdE39DE9a59b3461A7"}
+        info={"Linagee wrapper contract"}
+    />
+    <TableRowMainnet
+        name={"Resolver"}
+        address={"0x6023E55814DC00F094386d4eb7e17Ce49ab1A190"}
+        info={"Linagee resolver contract"}
+    />
+</TableComponent>
+
+## Linagee
+
+The original linagee contract. TODO add more info
+
+## Wrapper
+
+The linagee wrapper contract. TODO add more info
+
+## Resolver
+
+The linagee resolver contract. TODO add more info
+
+
+</TabItem>
+
+<TabItem value="Goerli" label="Goerli">
+    <TableComponent>
+        <TableRowGoerli
+            name={"TODO"}
+            address={"TODO"}
+            info={"TODO"}
+        />
+    </TableComponent>
+</TabItem>
+</Tabs>
